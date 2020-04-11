@@ -12,6 +12,8 @@ var john = {
     }
 }
 
+//TO-DO: Learn even more
+
 var mark = {
     fullName: 'Mark Miller',
     mass: 78,
