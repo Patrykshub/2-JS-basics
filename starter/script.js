@@ -33,7 +33,7 @@ if (john.calcBMI() > mark.calcBMI()) {
 var lastName = prompt('what is your name?', 'Harry Potter');
 alert(lastName);
 */
-
+/*
 var age = [14,16,18,20,24]
 for (var i = 0; i <= age.length; index++) {
 };
@@ -48,21 +48,17 @@ var gate = function(age){
 }
 gate(age[i]);
 
-
-
-
-
-
-
 /*
 age[0] >=18 ? console.log('drinks a beer')
 : console.log('drinks a juice');
 */
 
 
+/*******************
+ * loops and iterations
+ */
 
-
-
+// lets see what this bullshit does
 
 
 
