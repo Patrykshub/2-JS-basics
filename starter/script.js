@@ -95,7 +95,7 @@ for (var i = 0; i < john.length; i++){// i++ to i = i + 1,   i += 2 to i = i +2.
 
 */
 // challenge 5, part 1
-
+/*
 var john = {
 
     fullName: 'John Smith',
@@ -131,6 +131,76 @@ var john = {
 
 john.tip();
 console.log(john);
+
+
+// challenge part2  gejostwo nie dziala
+
+var mark ={
+    bills: [77, 375, 110, 45],
+    fullName: 'Mark Smith',
+
+    calcTips: function(){
+
+        this.tips =[];
+        this.finalValues =[];
+
+
+        for(var i = 0; i < this.bills.length; i++)
+
+        var bill = this.bills[i];
+        var percentage;
+
+        if(bill < 100){
+            percentage = .2;
+        } else if(bill >=100 && bill < 300){
+            percentage = .1;
+        } else{
+            percentage = .25;
+        }
+
+        this.tips[i] = percentage * bill;
+        this.finalValues[i] = percentage * bill + bill;
+
+
+    }
+
+}
+mark.calcTips();
+console.log(mark);
+
+*/
+
+/**********************************
+ * fucking around
+ */
+
+var x ={
+    
+    liczby: [10, 12, 20, 18, 16, 33, 40, 50],
+
+    podstawa: function(){
+
+        for(i = 0; i < this.liczby.length; i++);
+
+            if(this.liczby[i] < 20){
+               console.log('to sa liczby ponizej 20:' + this.liczby[i]); 
+            } else if (this.liczby[i] > 20 && this.liczby[i] < 35){
+                console.log('te liczby >20&&<35' + this.liczby[i]);
+
+            }   else {
+                console.log('te liczby >35' + this.liczby[i]);
+            }
+
+    
+    }
+    
+
+}
+x.podstawa();
+console.log(x);
+
+
+
 
 
 
