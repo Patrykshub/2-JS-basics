@@ -95,7 +95,7 @@ for (var i = 0; i < john.length; i++){// i++ to i = i + 1,   i += 2 to i = i +2.
 
 */
 // challenge 5, part 1
-/*
+
 var john = {
 
     fullName: 'John Smith',
@@ -133,47 +133,74 @@ john.tip();
 console.log(john);
 
 
-// challenge part2  gejostwo nie dziala
+// challenge part 2  gejostwo nie dziala, juz dziala.
 
-var mark ={
-    bills: [77, 375, 110, 45],
-    fullName: 'Mark Smith',
+var mark = {
 
-    calcTips: function(){
+    fullName: 'Mark Miller',
+    bills: [77, 475, 110, 45],
+    tip: function(){
 
-        this.tips =[];
-        this.finalValues =[];
+        this.tips = [];
+        this.finalValues = [];
 
+        for(var i = 0; i < this.bills.length; i++){
 
-        for(var i = 0; i < this.bills.length; i++)
+            var percentage;
 
-        var bill = this.bills[i];
-        var percentage;
+            var bill = this.bills[i];
 
-        if(bill < 100){
-            percentage = .2;
-        } else if(bill >=100 && bill < 300){
-            percentage = .1;
-        } else{
-            percentage = .25;
+            if(bill < 100){
+                percentage = 0.2;
+    
+            } else if (bill >= 100 && bill < 300){
+                percentage = 0.1;
+    
+            } else {
+                percentage = 0.25;
+            }
+            this.tips[i] = percentage * bill;
+            this.finalValues[i] = percentage * bill + bill;
+
         }
+    }
 
-        this.tips[i] = percentage * bill;
-        this.finalValues[i] = percentage * bill + bill;
+
+}
+
+mark.tip();
+console.log(mark);
+
+    function calcAverage (tips){
+        var sum = 0;
+            for(var i = 0; i < tips.length; i++){
+
+                sum = sum + tips[i];
+
+            }
+            return average = sum / tips.length;
 
 
     }
 
-}
-mark.calcTips();
-console.log(mark);
+john.average = calcAverage(john.tips);
+mark.average = calcAverage(mark.tips);
+console.log(john, mark);
 
-*/
+    if (john.average > mark.average){
+        console.log(john.fullName + '\s family pays higher tips, with an average of $' + john.average);
+    } else if (mark.average > john.average){
+        console.log(mark.fullName + '\s family pays higher tips, with an average of $' + mark.average);
+    }else{
+        console.log('the average tips are equal for both of the families');
+    }
+
+
 
 /**********************************
  * fucking around
  */
-
+/*
 var x ={
     
     liczby: [10, 12, 20, 18, 16, 33, 40, 50],
@@ -200,7 +227,7 @@ x.podstawa();
 console.log(x);
 
 
-
+*/
 
 
 
